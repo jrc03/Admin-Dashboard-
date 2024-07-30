@@ -1,0 +1,119 @@
+body{
+    margin: 0px;
+height: 100vh;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+
+.container{
+min-height: 100vh;
+display: grid;
+grid-template-columns: 1fr repeat(2, 2fr);
+grid-template-rows: 2fr 10fr 1fr;
+grid-template-areas: 
+"sidebar header header"
+"sidebar main main"
+"sidebar footer footer"
+;
+
+}
+
+.container header{
+   display: grid;
+   grid-template-columns: repeat(2, minmax(60px, 1fr));
+   align-items: center;
+background-color: #EEEEEE;
+    grid-area: header;
+    
+}
+
+.searchbar{
+    padding: 7px;
+    margin-left: 50px;
+    width: 500px;
+    display: flex;
+   
+    border-radius: 20px;
+    background-color: #ddd;
+}
+button, input{
+    border: none;
+    background-color: #ddd;
+   
+}
+input{
+    width: 100%;
+    outline: none;
+}
+
+.userPic{
+    height: 60px;
+    width: 60px;
+font-weight: 600;
+
+}
+#userPic{
+    width: 80px;
+    height: 80px;
+}
+.userThings{
+    display: flex;
+    gap: 8px;
+    height: 80px;
+    width: 100%;
+   align-items: center;
+}
+.profileThings{
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   gap: 8px;
+   padding: 10px;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+#logo{
+    height: 60px;
+    width: 60px;
+}
+
+.container aside{
+grid-area: sidebar;
+background-color:#03346E;
+padding-left: 10px;
+color: white;
+font-size: large;
+font-weight: 600;
+
+}
+.navigation{
+   display: flex;
+   flex-direction: column;
+  align-content: center;
+  
+  
+}
+
+
+.sidebar > ul,  li{
+list-style-type: none;
+height: 30px;
+padding: 5px;
+
+
+}
+.container main{
+    grid-area: main;
+    background-color: #ddd;
+}
+
+.container footer{
+    background-color: #021526;
+    grid-area: footer;
+}
+
