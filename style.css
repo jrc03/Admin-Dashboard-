@@ -1,7 +1,6 @@
 body{
     margin: 0px;
 height: 100vh;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 
@@ -10,7 +9,7 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
 min-height: 100vh;
 display: grid;
 grid-template-columns: 1fr repeat(2, 2fr);
-grid-template-rows: 2fr 10fr 1fr;
+grid-template-rows: 1fr 4fr 70px;
 grid-template-areas: 
 "sidebar header header"
 "sidebar main main"
@@ -30,7 +29,7 @@ background-color: #EEEEEE;
 
 .searchbar{
     padding: 7px;
-    margin-left: 50px;
+    margin-left: 30px;
     width: 500px;
     display: flex;
    
@@ -57,6 +56,12 @@ font-weight: 600;
     width: 80px;
     height: 80px;
 }
+
+.notiImg{
+    width: 32px;
+    height: 32px;
+    padding: 5px;
+}
 .userThings{
     display: flex;
     gap: 8px;
@@ -70,6 +75,28 @@ font-weight: 600;
    align-items: center;
    gap: 8px;
    padding: 10px;
+   margin-right: 40px;
+}
+.userButtons{
+
+    display: flex;
+    gap: 10px;
+    justify-self: flex-end;
+    margin-right: 60px;
+}
+.userName{
+    font-weight: 700;
+}
+
+input[type=button]{
+border: #03346E 2px solid;
+border-radius: 20px;
+color: white;
+background-color: #03346E;
+height: 40px;
+width: 70px;
+font-weight: 500;
+padding: 5px;
 }
 
 .title{
@@ -91,14 +118,11 @@ font-size: large;
 font-weight: 600;
 
 }
-.navigation{
-   display: flex;
-   flex-direction: column;
-  align-content: center;
-  
-  
-}
 
+.navigation > li{
+   height: 24px;
+   
+}
 
 .sidebar > ul,  li{
 list-style-type: none;
@@ -110,6 +134,47 @@ padding: 5px;
 .container main{
     grid-area: main;
     background-color: #ddd;
+    display: grid;
+    grid-template-columns:  2fr 1fr;
+    grid-template-rows: 50px 1fr;
+    gap: 8px;
+}
+.topBar{
+  margin-bottom: 10px;
+
+}
+.announcements{
+ grid-column: 2/3;
+ grid-row: 1/2;
+}
+.cards{
+    display: grid;
+    margin: 15px;
+    grid-template-columns: repeat(2, minmax(200px,1fr));
+    gap: 8px;
+}
+.annCards{
+  
+    padding: 12px;
+    margin-left: 10px;
+    border-radius: 10px;
+    width: 300px;
+    height: 400px;
+    font-size: 14px;
+    background-color: #F5F5F5; 
+}
+.annCard{
+    
+    border-bottom: #ddd 2px solid;
+     border-bottom-width: 50%;
+}
+.card{
+    padding: 12px;
+    margin-left: 10px;
+    border-left: 8px solid #03346E;
+    border-radius: 10px;
+    width: 400px;
+    background-color: #F5F5F5;
 }
 
 .container footer{

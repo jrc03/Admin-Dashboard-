@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <title>Admin Dashboard</title>
 </head>
 <body>
@@ -17,7 +20,7 @@
             </div>
             <div class="profileThings">
                 <div class="noti">
-                    <a href="#">Notifications</a>
+               <img class="notiImg" src="./media/notifications_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg">
                 </div>
                 <div class="userPic">
                     <img src="./media/face-man-profile.svg" alt="User Profile">
@@ -29,11 +32,17 @@
             <div class="userThings">
                 <img id="userPic"  src="./media/face-man-profile.svg" alt="User Profile">
                 <div class="userName">
-                   <p style="font-size: small;">Hi, there,</p>
-                    <p>John Doe</p>
+                   <p style="font-size: small; font-weight: 500;">Hi there,</p>
+                    <p>John Doe (@johndoe)</p>
                 </div>
+
+                
             </div>
-           
+            <div class="userButtons">
+                <input type="button" value="New">
+                <input type="button" value="Upload">
+                <input type="button" value="Share">
+               </div>
         </header>
         <aside class="sidebar">
             <div><div class="title">
@@ -57,7 +66,65 @@
                 </nav>
             </div>
         </aside>
-        <main></main>
+        <main>
+            <div class="topBar">
+                <h1>Your projects</h1>
+            </div>
+
+<div class="cards">
+    <div class="card">
+        <h3>Upcoming Events</h3>
+        <p>Join us for our annual tech conference where industry leaders will discuss the future of software development. Don't miss out on workshops, networking opportunities, and keynote sessions that will inspire and educate.</p>
+    </div>
+    
+    <div class="card">
+        <h3>Latest Announcements</h3>
+        <p>We're excited to announce the release of our new mobile app, designed to streamline your workflow and enhance productivity. Download it now from the app store and experience a new level of efficiency.</p>
+    </div>
+    
+    <div class="card">
+        <h3>Featured Article</h3>
+        <p>Check out our latest blog post on the top 10 programming languages to learn in 2024. Stay ahead of the curve and discover which languages are gaining popularity and why you should consider learning them.</p>
+    </div>
+    
+    <div class="card">
+        <h3>User Testimonials</h3>
+        <p>"Using this platform has transformed the way I manage my projects. The intuitive interface and powerful features make it an indispensable tool for any developer." - Jane Doe, Software Engineer.</p>
+    </div>
+    
+    <div class="card">
+        <h3>Support Resources</h3>
+        <p>Need help? Visit our support center for FAQs, tutorials, and guides. Our dedicated team is here to assist you with any questions or issues you may encounter. Get the support you need to succeed.</p>
+    </div>
+    
+    <div class="card">
+        <h3>Special Offers</h3>
+        <p>For a limited time, enjoy a 20% discount on all premium subscriptions. Unlock advanced features and take your projects to the next level with our exclusive offer. Sign up today and save!</p>
+    </div>
+    
+</div>
+<div class="announcements">
+    <h1>Announcements</h1>
+<div class="annCards">
+   <div class="annCard">
+        <h3>Site Maintenance</h3>
+        <p>We'll be performing some maintenance on our website for a few minutes today. Please be patient and don't hesitate to reach out if you need assistance.</p>
+    </div>
+    <div class="annCard">
+        <h3>Community Share Day</h3>
+        <p>Join us for a virtual community share day to discuss the latest trends in technology, share your experiences, and learn from others. Don't miss out on this opportunity to connect with fellow developers and learn from experts.</p>
+    </div>
+    <div class="annCard" style="border: none;">
+        <h3>New App Release</h3>
+        <p>We're thrilled to announce the release of our new mobile app, designed to streamline your workflow and enhance productivity. Download it now from the app store and experience
+        </div>
+
+    </div>
+</div>
+
+
+
+        </main>
         <footer></footer>
     </section>
 </body>
