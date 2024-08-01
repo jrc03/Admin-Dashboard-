@@ -264,7 +264,7 @@ input[type=button]:hover{
     border-radius: 20%;
     
 }
-.userName:hover{
+#userName:hover{
     background-color: #ddd;
     cursor: pointer;
     padding: 3px;
