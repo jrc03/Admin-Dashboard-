@@ -1,174 +1,191 @@
-body{
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
     margin: 0px;
-height: 100vh;
-
+    font-family: 'Nunito', sans-serif;
 }
 
-
-.container{
-min-height: 100vh;
-display: grid;
-grid-template-columns: 1fr repeat(2, 2fr);
-grid-template-rows: 1fr 4fr 70px;
-grid-template-areas: 
-"sidebar header header"
-"sidebar main main"
-"sidebar footer footer"
-;
-
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 300px repeat(2, 2fr);
+    grid-template-rows: 1fr 5fr 40px;
+    grid-template-areas:
+        "sidebar header header"
+        "sidebar main main"
+        "sidebar footer footer";
 }
 
-.container header{
-   display: grid;
-   grid-template-columns: repeat(2, minmax(60px, 1fr));
-   align-items: center;
-background-color: #EEEEEE;
+.container header {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(60px, 1fr));
+    align-items: center;
+    background-color: #EEEEEE;
     grid-area: header;
-    
 }
 
-.searchbar{
+.searchbar {
     padding: 7px;
     margin-left: 30px;
     width: 500px;
     display: flex;
-   
     border-radius: 20px;
     background-color: #ddd;
 }
-button, input{
+
+button, input {
     border: none;
     background-color: #ddd;
-   
 }
-input{
+
+input {
     width: 100%;
     outline: none;
 }
 
-.userPic{
+.userPf, #userPf {
     height: 60px;
     width: 60px;
-font-weight: 600;
-
-}
-#userPic{
-    width: 80px;
-    height: 80px;
+    font-weight: 600;
+    border-radius: 50%;
+    margin: 4px;
 }
 
-.notiImg{
+
+
+.notiImg {
     width: 32px;
     height: 32px;
     padding: 5px;
 }
-.userThings{
+
+.userThings {
     display: flex;
     gap: 8px;
     height: 80px;
     width: 100%;
-   align-items: center;
+    align-items: center;
 }
-.profileThings{
-   display: flex;
-   justify-content: flex-end;
-   align-items: center;
-   gap: 8px;
-   padding: 10px;
-   margin-right: 40px;
-}
-.userButtons{
 
+.profileThings {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    margin-right: 40px;
+}
+
+.userButtons {
     display: flex;
     gap: 10px;
     justify-self: flex-end;
     margin-right: 60px;
 }
-.userName{
+
+.userName {
     font-weight: 700;
 }
 
-input[type=button]{
-border: #03346E 2px solid;
-border-radius: 20px;
-color: white;
-background-color: #03346E;
-height: 40px;
-width: 70px;
-font-weight: 500;
-padding: 5px;
+input[type=button] {
+    border: #03346E 2px solid;
+    border-radius: 20px;
+    color: white;
+    background-color: #03346E;
+    height: 40px;
+    width: 70px;
+    font-weight: 500;
+    padding: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; 
 }
 
-.title{
+.title {
     display: flex;
     align-items: center;
     gap: 8px;
+    padding: 10px;
+
 }
-#logo{
+
+#logo {
     height: 60px;
     width: 60px;
 }
 
-.container aside{
-grid-area: sidebar;
-background-color:#03346E;
-padding-left: 10px;
-color: white;
-font-size: large;
-font-weight: 600;
+.container aside {
+    grid-area: sidebar;
+    background-color: #03346E;
+    padding-left: 10px;
+    color: white;
+    font-size: large;
+    font-weight: 600;
+    
 
 }
 
-.navigation > li{
-   height: 24px;
-   
+.navigation > li {
+    height: 24px;
 }
 
-.sidebar > ul,  li{
-list-style-type: none;
-height: 30px;
-padding: 5px;
-
-
+.sidebar > ul, li {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 32px;
+    width: 70%;
+    gap: 6px;
+    padding: 5px;
 }
-.container main{
+
+.container main {
     grid-area: main;
     background-color: #ddd;
+padding: 20px;
+padding-bottom: 0px;
+padding-top: 0px;
     display: grid;
-    grid-template-columns:  2fr 1fr;
-    grid-template-rows: 50px 1fr;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 50px 2fr 1fr;
     gap: 8px;
 }
-.topBar{
-  margin-bottom: 10px;
 
+.topBar {
+    margin-bottom: 10px;
 }
-.announcements{
- grid-column: 2/3;
- grid-row: 1/2;
+
+.announcements {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: grid;
+    
+    grid-template-rows: 50px 1fr 1fr;
 }
-.cards{
+
+.cards {
     display: grid;
     margin: 15px;
-    grid-template-columns: repeat(2, minmax(200px,1fr));
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
     gap: 8px;
+    grid-row: 2 / 4;
 }
-.annCards{
-  
-    padding: 12px;
-    margin-left: 10px;
+
+.annCards {
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 0px;
     border-radius: 10px;
-    width: 300px;
-    height: 400px;
-    font-size: 14px;
-    background-color: #F5F5F5; 
+    width: 350px;
+    height: 350px;
+    font-size: 12px;
+    background-color: #F5F5F5;
 }
-.annCard{
-    
+
+.annCard {
     border-bottom: #ddd 2px solid;
-     border-bottom-width: 50%;
 }
-.card{
+
+.card {
     padding: 12px;
     margin-left: 10px;
     border-left: 8px solid #03346E;
@@ -177,8 +194,60 @@ padding: 5px;
     background-color: #F5F5F5;
 }
 
-.container footer{
+.trendingCards {
+    border-radius: 10px;
+    width: 350px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    
+}
+
+.trendingCard {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.trendingCard img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.trendingCard p {
+    margin: 0;
+    font-weight: 600;
+}
+
+.trendingCard .caption {
+    font-weight: 400;
+    color: #555;
+}
+
+.container footer {
     background-color: #021526;
     grid-area: footer;
 }
 
+
+
+sidebar > ul, li:hover{
+cursor: pointer;
+    background-color: #1C2B41;
+}
+
+input[type=button]:hover{
+    background-color: #ddd; 
+    color: #000000;
+    font-weight: 600; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    cursor: pointer;
+}
