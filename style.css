@@ -251,3 +251,22 @@ input[type=button]:hover{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     cursor: pointer;
 }
+
+.noti:hover{
+    background-color: #ddd;
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 30%;
+}
+.userPic:hover{
+    background-color: #ddd;
+    cursor: pointer;
+    border-radius: 20%;
+    
+}
+.userName:hover{
+    background-color: #ddd;
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 10%;
+}
